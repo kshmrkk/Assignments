@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class CountingLetters {
+    //Input: aabbbbeeeeffggg
+    //Output: a2b4e4f2g3
+    public static void main(String [] args){
+        Scanner input = new Scanner(System.in);
+        System.out.println("Input your desired words or letters:");
+        String letter = input.nextLine();
+        int [] counts = new int[(int) Character.MAX_VALUE];
+        for (int i = 0; i < letter.length(); i++){
+            char charAt = letter.charAt(i);
+            counts[(int) charAt]++;
+        }
+        for(int i = 0; i < counts.length; i++){
+            if (counts[i]>0)
+                System.out.print(""+ (char)i + counts[i]+ "");
+        }
+    }
+}
