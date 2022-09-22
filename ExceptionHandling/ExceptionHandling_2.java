@@ -8,12 +8,12 @@ public class ExceptionHandling_2 {
             int sal;
             Candidate can;
             Scanner input = new Scanner (System.in);
-            System.out.println("Candidate details");
-            System.out.println("Enter Candidate Name");
+            System.out.println("---Candidate details---");
+            System.out.print("Enter Candidate Name:");
             name = input.next();
-            System.out.println("Enter Candidate gender");
+            System.out.print("Enter Candidate gender:");
             gender = input.next();
-            System.out.println("Enter Candidate salary");
+            System.out.print("Enter Candidate salary:");
             sal = input.nextInt();
             if(sal < 10000) {
                 throw new InvalidSalaryException("Salary cannot be less than 10000");
